@@ -1,19 +1,19 @@
 {
 	"schemaVersion": 1,
-	"id": "modid",
+	"id": "cheatkiller",
 	"version": "${version}",
-	"name": "Example mod",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"name": "CheatKiller",
+	"description": "检查违禁模组并踢出服务器",
 	"authors": [
-		"Me!"
+		"XiaoYeCK"
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"homepage": "https://cheatkiller.xiaoyeck.tech/",
+		"sources": "https://github.com/XiaoYeCK/CheatKiller"
 	},
-	"license": "CC0-1.0",
+	"license": "MIT",
 	"icon": "assets/modid/icon.png",
-	"environment": "*",
+	"environment": "server",
 	"entrypoints": {
 		"main": [
 			"com.example.ExampleMod"
@@ -30,12 +30,9 @@
 		}
 	],
 	"depends": {
-		"fabricloader": ">=0.17.3",
-		"minecraft": "~1.21.10",
-		"java": ">=21",
+		"fabricloader": "*",
+		"minecraft": "*",
+		"java": "*",
 		"fabric-api": "*"
-	},
-	"suggests": {
-		"another-mod": "*"
 	}
 }
