@@ -3,7 +3,10 @@
 	"id": "cheatkiller",
 	"version": "${version}",
 	"name": "CheatKiller",
-	"description": "检查违禁模组并踢出服务器",
+	"description": {
+		"en_us": "Detect and kick players with blacklisted cheat mods",
+		"zh_cn": "检查违禁模组并踢出服务器"
+	},
 	"authors": [
 		"XiaoYeCK"
 	],
@@ -12,27 +15,19 @@
 		"sources": "https://github.com/XiaoYeCK/CheatKiller"
 	},
 	"license": "MIT",
-	"icon": "assets/modid/icon.png",
 	"environment": "server",
 	"entrypoints": {
-		"main": [
-			"com.example.ExampleMod"
-		],
-		"client": [
-			"com.example.ExampleModClient"
+		"server": [
+			"tech.xiaoyeck.cheatkiller.CheatKiller"
 		]
 	},
-	"mixins": [
-		"modid.mixins.json",
-		{
-			"config": "modid.client.mixins.json",
-			"environment": "client"
-		}
-	],
 	"depends": {
-		"fabricloader": "*",
-		"minecraft": "*",
-		"java": "*",
-		"fabric-api": "*"
+		"fabricloader": ">=0.18.1",
+		"minecraft": "1.21.8",
+		"java": ">=21",
+		"fabric-api": ">=0.136.1+1.21.8"
+	},
+	"custom": {
+		"fabric-api:module-lifecycle": "stable"
 	}
 }
